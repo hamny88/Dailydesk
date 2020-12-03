@@ -3,8 +3,6 @@ const API_KEY = config.weather_KEY;
 const COORDS = 'coords';
 
 function getweather(lat,lng){
-    //fetch()안에는 가져올 데이터가 들어간다. 
-    //then을 씀으로써 fetch가 완료된 다음의 작업을 지정할 수 있다.
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
     ).then(function(response){
        return response.json();
