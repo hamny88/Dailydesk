@@ -1,0 +1,157 @@
+body {
+    background-color: #34495e;
+}
+button {
+    margin-left: 10px;
+}
+input { 
+    text-align: center; 
+}
+input[type="text"]
+{
+    font-size:30px;
+}
+input:focus::placeholder {
+    color: transparent;
+  }
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size : 30px;
+ }
+ button {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+
+ }
+ .form,
+.greetings {
+    display : none;
+}
+.share{
+    font-size: 25px;
+    position: absolute;
+    right: 33%;
+    top: 56%;
+    display: none;
+    cursor: pointer;
+}
+.showing {
+    z-index: 0;
+    display: block;
+}
+.none {
+    display: none;
+}
+
+.js-title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 139px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 16%;
+
+}
+.nameInput {
+    position: absolute;
+    left: 40%;
+    width: 412px;
+    top: 50%;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: white;
+}
+.todoInput {
+    width : 460px;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: white;
+}
+.js-greetings {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 49px;
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    margin-left: -213px;
+}
+
+.js-toDoForm {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.js-toDoList {
+    width: 30%;
+    position: absolute;
+    top: 58%;
+    left: 32%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10%;
+}
+.js-weather {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    right: 1%;
+
+}
+.askName {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 42%;
+    top: 44%;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.opacityZero{
+    opacity: 0;
+}
+
+.bgImage{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height : 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+}
+.location{
+    position: absolute;
+    color: white;
+    font-size: 32px;;
+}
