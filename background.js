@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const unsplash =config.background_KEY;
+const unsplash = config.background_KEY;
 const IMG_NUMBER = 5;
 
 
