@@ -15,7 +15,6 @@ function getweather(lat,lng){
         
     });
     
-   
 }
 
 function saveCoords(coordsObj){

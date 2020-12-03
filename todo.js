@@ -86,20 +86,30 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
     function loadToDos(){
         loadedtoDos = localStorage.getItem(TODOS_LS);
-        toDoSize = JSON.parse(loadedtoDos).length;
-        console.log(toDoSize)
+        if(loadedtoDos !== null){
+            toDoSize = JSON.parse(loadedtoDos).length;
+            console.log(toDoSize)
 
-        if(toDoSize !== 0){
-            paintShare();
-        }
-
-        if(loadedtoDos !== null) {
+            if(toDoSize !== 0){
+                paintShare();
+            }
+            
             const parsedToDos = JSON.parse(loadedtoDos);
             parsedToDos.forEach(function(toDo){
                 paintToDo(toDo.text);
             });
-            //parsedToDos.forEach(listUp);
 
+       
+        
+
+        // if(loadedtoDos !== null) {
+        //     const parsedToDos = JSON.parse(loadedtoDos);
+        //     parsedToDos.forEach(function(toDo){
+        //         paintToDo(toDo.text);
+        //     });
+        //     //parsedToDos.forEach(listUp);
+
+        // }
         }
     }
     function init(){
