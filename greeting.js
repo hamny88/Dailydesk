@@ -18,12 +18,15 @@ function saveName(text){
 }
 
 function handleSubmit(event) {
+   
     event.preventDefault();
     const currentValue = input.value;
-   paintGreeting(currentValue);
-   saveName(currentValue);
-   gr_toDos.classList.remove(NONE);
-   gr_toDoList.classList.remove(NONE);
+    if(currentValue !== "") {
+        paintGreeting(currentValue);
+        saveName(currentValue);
+        gr_toDos.classList.remove(NONE);
+        gr_toDoList.classList.remove(NONE);
+    }
 }
 
 function askForName() {
@@ -37,6 +40,7 @@ function greetingTime(){
     const hours = date.getHours();
     return hours;
 }
+
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);

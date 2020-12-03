@@ -100,16 +100,6 @@ const toDoForm = document.querySelector(".js-toDoForm"),
             });
 
        
-        
-
-        // if(loadedtoDos !== null) {
-        //     const parsedToDos = JSON.parse(loadedtoDos);
-        //     parsedToDos.forEach(function(toDo){
-        //         paintToDo(toDo.text);
-        //     });
-        //     //parsedToDos.forEach(listUp);
-
-        // }
         }
     }
     function init(){
