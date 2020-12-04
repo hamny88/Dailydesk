@@ -1,5 +1,15 @@
+@keyframes fadeIn{
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     background-color: #34495e;
+    margin: 0;
 }
 button {
     margin-left: 10px;
@@ -43,7 +53,7 @@ input:focus::placeholder {
 }
 .showing {
     z-index: 0;
-    display: block;
+    display: block !important;
 }
 .none {
     display: none;
@@ -57,6 +67,7 @@ input:focus::placeholder {
     left: 50%;
     margin-left: -200px;
     top: 16%;
+    animation: fadeIn .5s linear;
 
 }
 .nameInput {
@@ -128,14 +139,6 @@ input:focus::placeholder {
     top: 44%;
 }
 
-@keyframes fadeIn{
-    from {
-        opacity : 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 .opacityZero{
     opacity: 0;
@@ -160,10 +163,85 @@ input:focus::placeholder {
 }
 
 .setting {
-    
     width: 34px;
     position: absolute;
-    left: 63%;
-    top: 42%;
-
+    right: 50%;
+    margin-right: -157px;
+    top: 35%;
+    margin-top: 16px;
 }
+.dropdown-content{
+    font-family: 'Montserrat', sans-serif;
+    display:none;
+    position: absolute;
+    width: 182px;
+    padding: 8px;
+    left: 556%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    animation: fadeIn .5s linear;
+}
+.dropdown-content::after{
+    position: absolute;
+    bottom: 61%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: transparent #333 transparent transparent;
+    border-width: 12px;
+    pointer-events: none;
+    content: " ";
+}
+
+.deleteUsr:hover,
+.fixphoto:hover,
+.about:hover {
+   text-decoration: underline;
+}
+.popup{
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: white;
+    width: 30%;
+    padding-left: 12px;
+    padding-right: 24px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    padding-top: 20px;
+    line-height: 150%;
+    font-size: 14px;
+    animation: fadeIn .5s linear;
+}
+.popup-position{
+    position: absolute;
+    left: 50%;
+    margin-left: -297px;
+    top: 7%;
+    z-index: 1;
+}
+.closeBtn{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 7%;
+    margin-top: -8px;
+    left: 90%;
+    margin-left: 28px;
+    font-size: 22px;
+}
+.overlay {
+   background-color: #333;
+   opacity : 0.7;
+   width: 100vw;
+   height : 100vh;
+   z-index: 10;
+  }

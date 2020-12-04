@@ -69,6 +69,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     // }
 
     function handleSubmit(event) {
+        console.log("Submit Listener")
         event.preventDefault();
         const currentValue = toDoInput.value;
         if(currentValue !== "") {

@@ -11,6 +11,7 @@
     </head>
 
     <body>
+    <!-- <div class="overlay"> -->
         <div class="js-clock">
             <h1 class="js-title">00:00</h1>
         </div>
@@ -25,8 +26,18 @@
         </form>
         <ul class="js-toDoList">
         </ul>
-
+        <div class="setting">
+            <button class="settingBtn">
+                <img class="setting" src="images/setting.png" />
+            </button>
+            <div class="dropdown-content">
+                &#9654;<a class="deleteUsr">Delete User</a><br>
+                &#9654;<a class="fixphoto">Fix the photo</a><br>
+                &#9654;<a class="about">About</a>
+            </div>
+        </div>
         <span class="js-weather"></span>
+    <!-- </div> -->
         <script src="clock.js"></script>
         <script src="greeting.js"></script>
         <script src="todo.js"></script>
@@ -34,6 +45,7 @@
         <script src="weather.js"></script>
         <script src="calendar.js"></script>
         <script src="setting.js"></script>
+   
     </body>
 
 </html>
