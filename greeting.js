@@ -54,7 +54,7 @@ function paintGreeting(text) {
     } else {
         GREETING_MSG = "Good evening";
     }
-    greeting.innerText = `${GREETING_MSG}, ${text}`;
+    greeting.innerText = `${GREETING_MSG} , ${text}`;
 }
 
 function loadName() {

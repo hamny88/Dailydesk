@@ -28,7 +28,6 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
         loadedtoDos = localStorage.getItem(TODOS_LS);
         toDoSize = JSON.parse(loadedtoDos).length;
-        console.log("Delte", toDoSize)
         if(toDoSize == 0){
            eraseShare();
         }

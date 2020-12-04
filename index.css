@@ -6,6 +6,14 @@
         opacity: 1;
     }
 }
+@keyframes fadeOut{
+    from {
+        opacity : 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 body {
     background-color: #34495e;
@@ -20,9 +28,17 @@ input {
 input[type="text"]
 {
     font-size:30px;
+    font-family: 'Nerko One', sans-serif;
 }
+
+input:focus {
+    top:49%;
+    transition: 0.5s;
+}
+
 input:focus::placeholder {
     color: transparent;
+    transition: 0.5s;
   }
 ::placeholder {
     color: white;
@@ -46,14 +62,39 @@ input:focus::placeholder {
 .share{
     font-size: 25px;
     position: absolute;
-    right: 33%;
-    top: 56%;
+    right: 26%;
+    top: 55%;
     display: none;
     cursor: pointer;
+}
+
+.share-tooltip {
+    position: relative;
+    padding: 4px;
+    background-color: #333;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+}
+.share-tooltip::after{
+    position: absolute;
+    bottom: 60%;
+    right: 98%;
+    top: 2px;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-color: transparent #333 transparent transparent;
+    border-width: 9px;
+    pointer-events: none;
+    content: " ";
 }
 .showing {
     z-index: 0;
     display: block !important;
+    animation: fadeIn 1s;
 }
 .none {
     display: none;
@@ -66,7 +107,7 @@ input:focus::placeholder {
     position: absolute;
     left: 50%;
     margin-left: -200px;
-    top: 16%;
+    top: 20%;
     animation: fadeIn .5s linear;
 
 }
@@ -119,12 +160,12 @@ input:focus::placeholder {
     left: 32%;
     font-size: 30px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nerko One', sans-serif;
     padding-left: 10%;
 }
 .js-weather {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'East Sea Dokdo', cursive;
     font-size: 30px;
     position: absolute;
     right: 1%;
@@ -132,7 +173,7 @@ input:focus::placeholder {
 }
 .askName {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     position: absolute;
     left: 42%;
@@ -154,7 +195,7 @@ input:focus::placeholder {
     animation: fadeIn .5s linear;
 }
 .location{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     position: absolute;
     bottom: 1%;
@@ -167,7 +208,7 @@ input:focus::placeholder {
     position: absolute;
     right: 50%;
     margin-right: -157px;
-    top: 35%;
+    top: 40%;
     margin-top: 16px;
 }
 .dropdown-content{
@@ -207,7 +248,7 @@ input:focus::placeholder {
 }
 .popup{
     display: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
     background-color: #333;
     color: white;
     width: 30%;
@@ -229,8 +270,8 @@ input:focus::placeholder {
 }
 .closeBtn{
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
     position: absolute;
     top: 7%;
     margin-top: -8px;
