@@ -91,7 +91,7 @@ input:focus::placeholder {
     position: absolute;
     left: 50%;
     top: 39%;
-    margin-left: -213px;
+    margin-left: -197px;
 }
 
 .js-toDoForm {
@@ -151,7 +151,19 @@ input:focus::placeholder {
     animation: fadeIn .5s linear;
 }
 .location{
-    position: absolute;
+    font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 32px;;
+    position: absolute;
+    bottom: 1%;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.setting {
+    
+    width: 34px;
+    position: absolute;
+    left: 63%;
+    top: 42%;
+
 }

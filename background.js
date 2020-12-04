@@ -1,10 +1,13 @@
 const body = document.querySelector("body");
 const unsplash = config.background_KEY;
 const IMG_NUMBER = 5;
-
+const OBJECT = '(tree||lake||mountain||flower||grass||sky)';
+const ORIENTATION = 'landscape';
+const COLOR = '(green||blue||black||brown||purple)';
 
 // function randomImage() {
-//     fetch(`https://api.unsplash.com/photos/random?client_id=${unsplash}&query=(tree||lake||mountain||flower||grass||sky)&orientation=landscape&fit=clamp`).then(function(response){
+//     fetch(`https://api.unsplash.com/photos/random?client_id=${unsplash}&query=${OBJECT}&orientation=${ORIENTATION}&color=${COLOR}&fit=fill`
+//     ).then(function(response){
 //     return response.json();    
 //     })
 //     .then(function(json) {
