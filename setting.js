@@ -2,14 +2,20 @@ const settingBtn = document.querySelector(".settingBtn"),
     dropdown = document.querySelector(".dropdown-content"),
     deleteUsr = document.querySelector(".deleteUsr"),
     fixphoto = document.querySelector(".fixphoto"),
-    about = document.querySelector(".about")    ;
+    about = document.querySelector(".about"),
+    currentImg = document.querySelector(".bgImage")    
+    ;
+
+const IMAGE_LS = "currentImage";
+var FLAG_FIX = Boolean(false);
 
 
-function handleSettingBtn() {
+function handleSettingBtn(event) {
     dropdown.classList.toggle("showing");
    
 }
-function handleDeleteUsr() {
+
+function handleDeleteUsr(event) {
     const userName = localStorage.getItem(USER_LS);
     if(userName !== null){
         localStorage.removeItem(USER_LS);
@@ -19,8 +25,20 @@ function handleDeleteUsr() {
         alert("There is no user to deleted");
     }
 }
-function handleFixphoto() {
 
+function handleFixphoto(event) {
+    if(FLAG_FIX === false) {
+        //Fix photo
+        console.log("Save IMG to LS")
+        localStorage.setItem(IMAGE_LS,image.src);
+        fixphoto.innerHTML = "Reload the photo";
+    } else {
+        //unfix
+        console.log("Delete IMG from LS")
+        localStorage.removeItem(IMAGE_LS);
+        fixphoto.innerHTML = "fix the photo";
+    }
+    FLAG_FIX = !FLAG_FIX;
 }
 
 function closeClick() {
@@ -55,7 +73,7 @@ function paintOverlay() {
      body.append(overlay);
 }
 
-function handleAbout() {
+function handleAbout(event) {
     //show
     const popUp = document.querySelector(".popup");
     popUp.classList.toggle("showing");
@@ -63,6 +81,11 @@ function handleAbout() {
 }
 
 function init() {
+    const savedIMG = localStorage.getItem(IMAGE_LS);
+    if(savedIMG !== null) {
+        FLAG_FIX = !FLAG_FIX;
+        fixphoto.innerHTML = "Reload the photo";
+    }
     paintPopup();
     settingBtn.addEventListener("click",handleSettingBtn);
     deleteUsr.addEventListener("click",handleDeleteUsr);
