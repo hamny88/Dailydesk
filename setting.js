@@ -51,7 +51,7 @@ function paintPopup() {
     popUpWindow.innerHTML="&#9654 This App's background images are from UNSPLASH API.\
     Due to the API request limit, if you reload the pages too much you can use default background image.\
     <br></br>\
-    &#9654; Background images are random, so when bright images are loaded it maybe difficult to see the white titles. If you have problem about it, please reload.\
+    &#9654; Background images are random, so when bright images are loaded it may difficult to see the white titles. If you have problem about it, please reload.\
     <br></br>\
     &#9654; Weather information is from OpenWeather API.\
     <br></br>\

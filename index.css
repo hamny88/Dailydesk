@@ -143,7 +143,7 @@ input:focus::placeholder {
     position: absolute;
     left: 50%;
     top: 39%;
-    margin-left: -197px;
+    margin-left: -238px;
 }
 
 .js-toDoForm {
@@ -209,7 +209,7 @@ input:focus::placeholder {
     right: 50%;
     margin-right: -157px;
     top: 40%;
-    margin-top: 16px;
+    margin-top: 4px;
 }
 .dropdown-content{
     font-family: 'Montserrat', sans-serif;
