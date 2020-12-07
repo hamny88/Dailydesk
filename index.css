@@ -96,6 +96,13 @@ input:focus::placeholder {
     display: block !important;
     animation: fadeIn 1s;
 }
+
+.short-showing {
+    z-index: 0;
+    display: block !important;
+    animation: fadeIn 0.5s;
+}
+
 .none {
     display: none;
 }
@@ -286,3 +293,14 @@ input:focus::placeholder {
    height : 100vh;
    z-index: 10;
   }
+.calenderList{
+    display: none;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    padding-right: 15px;
+    line-height: 194%;
+    right: 29%;
+    top: 30%;
+}

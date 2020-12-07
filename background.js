@@ -34,7 +34,6 @@ function handleLoad(event) {
     image.classList.remove("opacityZero");
     image.classList.add("bgImage");
     body.prepend(image);
-  //  body.prepend(location);
 }
 
 

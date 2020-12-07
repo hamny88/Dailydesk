@@ -11,7 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
         <script type='text/javascript' src='config.js'></script>
-
+        <script src="https://apis.google.com/js/api.js"></script>
+        
     </head>
 
     <body>
@@ -23,9 +24,12 @@
         </form>
         <h4 class="js-greetings greetings"></h4>
 
-        <button class="share">📆
+        <button class="share" onclick="authenticate().then(loadClient)">📆
             <span class="share-tooltip">Share to Google calendar</span>
         </button>
+        <div class="calenderList">
+            <ul class="calUl"></ul>
+        </div>
         <form class="js-toDoForm">
             <input class="todoInput" type="text" placeholder="write a to do"/>
         </form>

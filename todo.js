@@ -85,6 +85,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     }
 
     function loadToDos(){
+        console.log("parsedToDos")
         loadedtoDos = localStorage.getItem(TODOS_LS);
         if(loadedtoDos !== null){
             toDoSize = JSON.parse(loadedtoDos).length;
@@ -93,8 +94,9 @@ const toDoForm = document.querySelector(".js-toDoForm"),
             if(toDoSize !== 0){
                 paintShare();
             }
-            
             const parsedToDos = JSON.parse(loadedtoDos);
+            console.log(parsedToDos)
+
             parsedToDos.forEach(function(toDo){
                 paintToDo(toDo.text);
             });

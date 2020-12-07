@@ -1,0 +1,31 @@
+[1206/144846.782:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1207/032840.466:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\c6af687a-ed3d-4e00-aff5-f963dada1c74: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1207/041835.160:ERROR:process_info.cc(359)] UncheckedAllocate
+[1207/060741.264:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.264:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.280:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.296:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.280:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.296:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269564 not found in process
+[1207/060741.311:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.327:ERROR:exception_snapshot_win.cc(99)] thread ID 269772 not found in process
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269624 not found in process
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269460 not found in process
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269520 not found in process
+[1207/060741.327:ERROR:exception_snapshot_win.cc(99)] thread ID 269668 not found in process
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269416 not found in process
+[1207/060741.333:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.333:ERROR:exception_snapshot_win.cc(99)] thread ID 269728 not found in process
+[1207/060741.349:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.349:ERROR:exception_snapshot_win.cc(99)] thread ID 269832 not found in process
+[1207/060741.365:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.365:ERROR:exception_snapshot_win.cc(99)] thread ID 269024 not found in process
+[1207/060741.365:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.365:ERROR:exception_snapshot_win.cc(99)] thread ID 267628 not found in process
+[1207/060741.380:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.380:ERROR:exception_snapshot_win.cc(99)] thread ID 268752 not found in process
+[1207/060741.380:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.380:ERROR:exception_snapshot_win.cc(99)] thread ID 269352 not found in process
+[1207/060741.486:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[1207/060741.486:ERROR:exception_snapshot_win.cc(99)] thread ID 262868 not found in process
