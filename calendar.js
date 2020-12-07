@@ -2,16 +2,25 @@ const shareBtn = document.querySelector(".share"),
     calDiv = document.querySelector(".calenderList"),
     calUl = document.querySelector(".calUl")
 ;
-const YMD = toString(date.getFullYear())
-let getCalendar = [];
+let startDate = "",
+  endDate = ""
+  ;
 
-const chosenCal = "";
+function getDate() {
+  let today = new Date();
+  console.log(Date.parse('2012-07-04T18:10:00.000+09:00'));
+  let strDate = today.getFullYear().toString() + "-";
+//  strDate += "-";
+  strDate += (today.getMonth()+1).toString() + "-";
+  strDate += today.getDate().toString() + "T";
+  startDate = strDate +  "09:00:00+09:00" ; 
+  endDate = strDate +  "23:59:59+09:00";
 
-console.log(shareBtn)
+  console.log("2020-12-07T23:59:59+09:00") 
+  console.log(startDate)
+}
+
 function authenticate() {
-    const success = gapi.auth2.getAuthInstance();
-    //gapi.auth2.init().isSignedIn.get();
-    //isSignedIn.le
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events"})
         .then(function() { console.log("Sign-in successful"); },
@@ -27,19 +36,20 @@ function authenticate() {
             },
               function(err) { console.error("Error loading GAPI client for API", err); });
   }
-
+//2020-12-08T10:00:00+09:00
 function execute(task,calId) {
+  console.log("Execute!")
     return gapi.client.calendar.events.insert({
       "calendarId": calId,
       "resource": {
         "summary": task,
         "end": {
-          "dateTime": "2020-12-28T17:00:00-07:00",
-          "timeZone": "America/Los_Angeles"
+          "dateTime": endDate,
+          "timeZone": "Asia/Seoul"
         },
         "start": {
-          "dateTime": "2020-12-07T09:00:00-07:00",
-          "timeZone": "America/Los_Angeles"
+          "dateTime": startDate,
+          "timeZone": "Asia/Seoul"
         }
       }
     })
@@ -55,21 +65,12 @@ function getCalendarList() {
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
-                const calID = response.result.items[0];
-                
+                const calID = response.result.items[0].summary;
+              
+                const parsedToDos = JSON.parse(loadedtoDos);
                 parsedToDos.forEach(function(toDo){
-                    execute(toDo.text,calId);
-                });
-               // execute(calId);
-                // const getCalLength = getCalResult.length;
-                // for(var i = 0; i < getCalLength ; i++) {
-                //     getCalendar.push(getCalResult[i].summary);
-                // }
-                // getCalendar.forEach(function(calList){
-                //     paintCalList(calList);
-                // })
-                // console.log(getCalendar)
-
+                  execute(toDo.text,calID);
+                  });
               },
               function(err) { console.error("Execute error", err); });
   }
@@ -95,7 +96,7 @@ function paintCalList(calName) {
     calDiv.classList.add("short-showing");
 }
 function init() {
-
+    getDate();
     shareBtn.addEventListener("click",handleShareClick);
 }
 

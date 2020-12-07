@@ -30,13 +30,19 @@ function handleFixphoto(event) {
     if(FLAG_FIX === false) {
         //Fix photo
         console.log("Save IMG to LS")
-        localStorage.setItem(IMAGE_LS,image.src);
+        const ImgObj = {
+            src : image.src,
+            location : GL_location
+        };
+        console.log(ImgObj)
+        localStorage.setItem(IMAGE_LS,JSON.stringify(ImgObj));
         fixphoto.innerHTML = "Reload the photo";
     } else {
         //unfix
         console.log("Delete IMG from LS")
         localStorage.removeItem(IMAGE_LS);
         fixphoto.innerHTML = "fix the photo";
+        window.location.reload();
     }
     FLAG_FIX = !FLAG_FIX;
 }

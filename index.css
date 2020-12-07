@@ -62,8 +62,8 @@ input:focus::placeholder {
 .share{
     font-size: 25px;
     position: absolute;
-    right: 26%;
-    top: 55%;
+    /* right: 26%;
+    top: 55%; */
     display: none;
     cursor: pointer;
 }
@@ -142,6 +142,7 @@ input:focus::placeholder {
     background: transparent;
     transition: border-color 0.2s;
     color: white;
+    margin-top: 52px;
 }
 .js-greetings {
     font-family: 'Montserrat', sans-serif;
@@ -150,6 +151,7 @@ input:focus::placeholder {
     position: absolute;
     left: 50%;
     top: 39%;
+    margin-top: 103px;
     margin-left: -238px;
 }
 
@@ -157,7 +159,7 @@ input:focus::placeholder {
     position: absolute;
     top: 54%;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -229px;
 }
 
 .js-toDoList {
@@ -169,6 +171,7 @@ input:focus::placeholder {
     color: white;
     font-family: 'Nerko One', sans-serif;
     padding-left: 10%;
+    margin-top: 90px;
 }
 .js-weather {
     color: white;
@@ -202,11 +205,12 @@ input:focus::placeholder {
     animation: fadeIn .5s linear;
 }
 .location{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'East Sea Dokdo', cursive;
     color: white;
     position: absolute;
     bottom: 1%;
-    font-size: 15px;
+    font-size: 29px;
+    left: 0.5%;
     font-style: italic;
 }
 

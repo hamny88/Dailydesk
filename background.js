@@ -7,6 +7,7 @@ const body = document.querySelector("body"),
     image = new Image(),
     IMG_LS = "currentImage"
     ;
+let GL_location = "Country,City";
 
 function randomImage() {
     console.log("call the Image")
@@ -17,15 +18,17 @@ function randomImage() {
     .then(function(json) {
         console.log(json)
         const imgPath = json.urls.regular;
-        const country = json.location.name;
- 
-        console.log(country)
+        //const country = json.location.name;
+        GL_location = json.location.name;
+        console.log(GL_location)
         // const image = new Image();
         const location = document.createElement("span");
-        location.innerText = country;
+        location.innerText = GL_location;
         location.classList.add("location");
         image.src = imgPath;
         image.classList.add("opacityZero");
+        console.log(location)
+        body.appendChild(location);
     });
    
 }
@@ -36,11 +39,22 @@ function handleLoad(event) {
     body.prepend(image);
 }
 
+function paintLocation(location) {
+    const imgLoc = document.createElement("span");
+    imgLoc.innerHTML = location;
+    imgLoc.classList.add("location");
+    body.append(imgLoc);
+}
 
 function loadImage() {
     const savedImage = localStorage.getItem(IMG_LS);
     if(savedImage !== null) {
-        image.src = savedImage;
+        console.log(savedImage)
+        const parsedImg = JSON.parse(savedImage);
+        console.log(parsedImg)
+        image.src = parsedImg.src;
+        const parsedLoc = parsedImg.location;
+        paintLocation(parsedLoc);
     } else {
         randomImage();
     }
