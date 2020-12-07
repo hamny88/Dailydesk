@@ -16,8 +16,8 @@ function getDate() {
   startDate = strDate +  "09:00:00+09:00" ; 
   endDate = strDate +  "23:59:59+09:00";
 
-  console.log("2020-12-07T23:59:59+09:00") 
   console.log(startDate)
+  console.log(endDate) 
 }
 
 function authenticate() {

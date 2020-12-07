@@ -32,7 +32,7 @@ input[type="text"]
 }
 
 input:focus {
-    top:49%;
+    top:51%;
     transition: 0.5s;
 }
 
@@ -60,10 +60,10 @@ input:focus::placeholder {
     display : none;
 }
 .share{
+    right: 0%;
+    top: 6%;
     font-size: 25px;
     position: absolute;
-    /* right: 26%;
-    top: 55%; */
     display: none;
     cursor: pointer;
 }
@@ -113,16 +113,18 @@ input:focus::placeholder {
     font-size: 139px;
     position: absolute;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -223px;
     top: 20%;
+    /* padding-bottom: 16px; */
+    margin-top: 78px;
     animation: fadeIn .5s linear;
 
 }
 .nameInput {
     position: absolute;
-    left: 40%;
-    width: 412px;
-    top: 50%;
+    left: 37%;
+    width: 439px;
+    top: 53.8%;
     border: 0;
     border-bottom: 2px solid white;
     outline: 0;
